@@ -1,0 +1,230 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 2rem;
+    font-family: sans-serif;
+    background: #ee9ca7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.profile{
+    width: 20rem;
+    height: 20rem;
+    background: white;
+    border-radius: 5rem;
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2);
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.profile:focus{
+    outline: 0.5rem solid blue;
+}
+
+.profile:hover{
+    cursor: pointer;
+}
+
+.profile__header{
+    height: 10rem;
+    
+    position: relative;
+}
+
+.profile:nth-of-type(1) .profile__header{
+    background: url(/img/pink.webp);
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    background-size: 100% 100%;
+    background-size: cover;
+}
+
+.profile:nth-of-type(2) .profile__header{
+    background: url(/img/fetch.webp);
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    background-size: 100% 100%;
+    background-size: cover;
+}
+
+.profile:nth-of-type(3) .profile__header{
+    background: url(/img/pinkie.webp);
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+    background-size: 100% 100%;
+    background-size: cover;
+}
+
+.unknown, .known{
+    height: 15rem;
+    width: 15rem;
+    background: #eee;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.5rem solid rgba(255, 255, 255, 0.8);
+}
+
+.unknown__face{
+    width: 40%;
+    height: 40%;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.unknown__body{
+    width: 80%;
+    height: 80%;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.known__image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.profile__body{
+    height: calc(80% - 10rem);
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+}
+
+.profile__text{
+    margin-top: 2rem;
+    font-size: 80%;
+    opacity: 0;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.2s;
+}
+
+.profile__footer{
+    height: 5rem;
+    border-bottom-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart{
+    width: 2.2rem;
+    height: 2.2rem;
+    background: red;
+    border: none;
+    position: relative;
+    transform: rotate(45deg);
+    opacity: 0;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.2s;
+}
+
+.heart:hover{
+    cursor: pointer;
+}
+
+.heart::before, .heart::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.heart::before{
+    transform: translateX(-50%);
+}
+
+.heart::after{
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 50rem){
+    .profile, .heart, .profile__text{
+        animation-name: "";
+        animation-duration: 0;
+    }
+    .profile{
+        height: 40rem;
+        width: 40rem;
+    }
+    .profile__text, .heart{
+        opacity: 1;
+    }
+}
+
+@keyframes expand{
+    0%{
+        height: 20rem;
+        width: 20rem;
+    }
+    50%{
+        height: 20rem;
+        width: 40rem;
+    }
+    100%{
+        height: 40rem;
+        width: 40rem;
+    }
+}
+
+@keyframes popup{
+    from{
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes popupHeart{
+    from{
+        opacity: 0;
+        transform: translateY(2rem) rotate(45deg);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) rotate(45deg);
+    }
+}
+

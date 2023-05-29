@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/846de9e07b.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <section class="searchBar">
+        <input id="js--searchBar" type="text" placeholder="Search for a product here..." class="searchBar__input">
+        <i class="fa-solid fa-magnifying-glass searchBar__glass"></i>
+    </section>
+
+    <section id="js--checkout" class="checkout a-popup">
+        <ul class="checkout__list">
+            <li class="checkout__listItem">
+                <img src="/img/dobby.webp" alt="Dobby" class="checkout__image">
+                <p class="checkout__title">Dobby</p>
+                <p id="js--dobby" class="checkout__amount">0</p>
+                <p id="js--dobbyPrice" class="checkout__price">0</p>
+            </li>
+            <li class="checkout__listItem">
+                <img src="/img/c3po.webp" alt="C-3PO" class="checkout__image">
+                <p class="checkout__title">C-3PO</p>
+                <p id="js--c3po" class="checkout__amount">0</p>
+                <p id="js--c3poPrice" class="checkout__price">0</p>
+            </li>
+            <li class="checkout__listItem">
+                <img src="/img/rocket.webp" alt="Rocket" class="checkout__image">
+                <p class="checkout__title">Rocket</p>
+                <p id="js--rocket" class="checkout__amount">0</p>
+                <p id="js--rocketPrice" class="checkout__price">0</p>
+            </li>
+        </ul>
+    </section>
+    <article id="js--shoppingModal" class="modal">
+        &#10003;Added to Cart
+    </article>
+    <button id="js--checkoutButton" class="shoppingCart">
+        <i class="fa-solid fa-bag-shopping bag"></i>
+        <i class="fa-solid fa-arrow-left arrow"></i>
+        <div id="js--message" class="shoppingCart__message">
+            0
+        </div>
+    </button>
+    <main>
+        <ul class="games">
+            <li data-title="DOBBYTHEHOUSEELFHARRYPOTTER" class="games__game a-popup">
+                <figure class="games__figure">
+                    <img src="/img/dobby.webp" alt="Dobby the House elf" class="games__img">
+                </figure>
+                <section class="games__body">
+                    <h2 class="games__h2">€27</h2>
+                    <h3 class="games__h3">Dobby the House elf - Harry Potter</h3>
+                    <div class="games__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <button data-product="dobby" class="games__button">Add to card</button>
+                </section>
+            </li>
+            <li data-title="C3POSTARWARS" class="games__game a-popup">
+                <figure class="games__figure">
+                    <img src="/img/c3po.webp" alt="C-3PO" class="games__img">
+                </figure>
+                <section class="games__body">
+                    <s>€84</s>
+                    <h2 class="games__h2">€54</h2>
+                    <h3 class="games__h3">C3PO - Star Wars</h3>
+                    <div class="games__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <button data-product="c3po" class="games__button">Add to card</button>
+                </section>
+            </li>
+            <li data-title="ROCKETTHERACOONGUARDIANSOFTHEGALAXY" class="games__game games__game--third a-popup">
+                <figure class="games__figure">
+                    <img src="/img/rocket.webp" alt="Rocket the Racoon" class="games__img">
+                </figure>
+                <section class="games__body">
+                    <h2 class="games__h2">€35</h2>
+                    <h3 class="games__h3">Rocket the Racoon - Guardians of the Galaxy</h3>
+                    <div class="games__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <button data-product="rocket" class="games__button">Add to card</button>
+                </section>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>

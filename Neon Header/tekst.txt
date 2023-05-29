@@ -1,0 +1,10 @@
+De animatie met de kleurencirkel werkt een code die je schrijft in css met keyframe.
+Er staat letterlijk wat er gebeurd eigenlijk.
+Je hebt op je cirkels een kleur gezet, daarom staat er bij hue-rotate eerst 0.
+Want dat is de kleur die je wilt,
+als je het op 1 turn zet dan laat de animatie alle kleuren zien die erna komen.
+In een cirkel want het is van een kleurencirkel.
+1 turn betekent basically 360 graden en dat is de graden van een hele cirkel, dus je gaat als het ware de hele cirkel langs en stopt wanneer hij weer bij de kleur is die jij als eerste had.
+Ik hoop dat dit de bedoeling was met het uitleggen.
+
+Anyways, ik vond het leukste wel dat ik nu weet hoe ik een animatie maak met css.

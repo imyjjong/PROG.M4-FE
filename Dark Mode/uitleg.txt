@@ -1,0 +1,29 @@
+De aside bestaat uit de navigation en die heeft 4 kinderen.
+
+    Navigation:
+        navigation__list, 
+        navigation__listItem, 
+        navigation__link,
+        navigation__premium
+
+Dit is 1 blok en deze zit in de aside en dit is eigenlijk een soort navigatie.
+Hij is klikbaar waardoor je bijvoorbeeld naar een andere pagina kan.
+
+De main bestaat uit heading en de ul.
+De heading heeft 3 kinderen + de label, 
+en de ul heeft 4 li kinderen met dezelfde classes 
+en 4 button kinderen met dezelfde classes
+en 4 p kinderen met dezelfde classes.
+
+    Heading:
+        dashboard__header,
+        dashboard__heading,
+        dashboardHeader__mode
+
+    ul:
+        products,
+        products__product*4
+        products__addButton*4
+        products__text*4
+
+Dit zijn samen 2 blokken en die blokken zitten in 1 body en daar zit een border omheen.

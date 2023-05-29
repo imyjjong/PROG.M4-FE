@@ -1,0 +1,318 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #eee;
+    --background-color-product: white;
+    --font-color-white: white;
+    --cover--color--base: #183322;
+    --cover--color--sheis: #0b3eff;
+    --cover--color--opone: #5a5959;
+    --cover--color--optwo: #354851;
+    --cover--color--poet: #ec6223;
+    --cover-color-base-less-opacity: rgba(24, 51, 34, 0.8);
+    --cover-color-sheis-less-opacity: rgba(11, 62, 255, 0.8);
+    --cover-color-opone-less-opacity: rgba(90, 89, 89, 0.8);
+    --cover-color-optwo-less-opacity: rgba(53, 72, 81, 0.8);
+    --cover-color-poet-less-opacity: rgba(236, 98, 35, 0.8);
+    --cover-color-base-almost-no-opacity: rgba(24, 51, 34, 0.2);
+    --cover-color-sheis-almost-no-opacity: rgba(11, 62, 255, 0.2);
+    --cover-color-opone-almost-no-opacity: rgba(90, 89, 89, 0.2);
+    --cover-color-optwo-almost-no-opacity: rgba(53, 72, 81, 0.2);
+    --cover-color-poet-almost-no-opacity: rgba(236, 98, 35, 0.2);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 4rem;
+    font-family: 'Open Sans', sans-serif;
+    flex-wrap: wrap;
+    padding: 4rem;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.modal{
+    width: 80vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    position: relative;
+    display: none;
+}
+
+.modal__figure{
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cover--color--base);
+}
+
+.modal__sheis figure{
+    background: var(--cover--color--sheis);
+}
+
+.modal__opone figure{
+    background: var(--cover--color--opone);
+}
+
+.modal__optwo figure{
+    background: var(--cover--color--optwo);
+}
+
+.modal__poet figure{
+    background: var(--cover--color--poet);
+}
+
+.modal__image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal__section{
+    width: 100%;
+    height: 100%;
+    background: var(--background-color-product);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.modal__heading{
+    text-transform: uppercase;
+    font-weight: 500;;
+    font-size: 200%;
+    border-bottom: 0.5rem solid var(--cover--color--base);
+}
+
+.modal__sheis h2{
+    border-bottom: 0.5rem solid var(--cover--color--sheis);
+}
+
+.modal__opone h2{
+    border-bottom: 0.5rem solid var(--cover--color--opone);
+}
+
+.modal__optwo h2{
+    border-bottom: 0.5rem solid var(--cover--color--optwo);
+}
+
+.modal__poet h2{
+    border-bottom: 0.5rem solid var(--cover--color--poet);
+}
+
+.modal__text{
+    font-size: 70%;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.modal__link{
+    font-size: 70%;
+}
+
+.modal__button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 7rem;
+    height: 7rem;
+    border: none;
+    border-radius: 50%;
+    font-size: 130%;
+    font-weight: 500;
+    background: var(--cover--color--base);
+    color: white;
+}
+
+.modal__sheis button{
+    background: var(--cover--color--sheis);
+}
+
+.modal__opone button{
+    background: var(--cover--color--opone);
+}
+
+.modal__optwo button{
+    background: var(--cover--color--optwo);
+}
+
+.modal__poet button{
+    background: var(--cover--color--poet);
+}
+
+.modal__button:hover{
+    cursor: pointer;
+}
+
+.product{
+    width: 25,6rem;
+    height: 32rem;
+    position: relative;
+    background: var(--background-color-product);
+}
+
+.product:hover{
+    pointer-events: cursor;
+}
+
+.product:hover .product__figure::after{
+    transform: translate(-50%, -50%);
+    width: 20rem;
+    height: 20rem;
+}
+
+.product:hover .product__figure{
+    transform: translateY(-2rem);
+}
+
+.product::after{
+    content: "";
+    position: absolute;
+    top: 95%;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    background: red;
+    z-index: -1;
+    filter: blur(0.8rem);
+}
+
+.product--base::after{
+    background: var(--cover-color-base-less-opacity);
+}
+
+.product--sheis::after{
+    background: var(--cover-color-sheis-less-opacity);
+}
+
+.product--opone::after{
+    background: var(--cover-color-opone-less-opacity);
+}
+
+.product--optwo::after{
+    background: var(--cover-color-optwo-less-opacity);
+}
+
+.product--poet::after{
+    background: var(--cover-color-poet-less-opacity);
+}
+
+.product__figure{
+    height: 80%;
+    width: 100%;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    transition: 0.2s all;
+}
+
+.product__figure::after{
+    content: "";
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    z-index: -1;
+    transition: 0.2s;
+}
+
+.product__figure--base::after{
+    background: var(--cover-color-base-almost-no-opacity);
+}
+
+.product__figure--sheis::after{
+    background: var(--cover-color-sheis-almost-no-opacity);
+}
+
+.product__figure--opone::after{
+    background: var(--cover-color-opone-almost-no-opacity);
+}
+
+.product__figure--optwo::after{
+    background: var(--cover-color-optwo-almost-no-opacity);
+}
+
+.product__figure--poet::after{
+    background: var(--cover-color-poet-almost-no-opacity);
+}
+
+.product__image{
+    height: 85%;
+    width: 85%;
+    object-fit: contain;
+}
+
+.product__section{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__section--one{
+    background: var(--cover--color--base);
+}
+
+.product__section--two{
+    background: var(--cover--color--sheis);
+}
+
+.product__section--three{
+    background: var(--cover--color--opone);
+}
+
+.product__section--four{
+    background: var(--cover--color--optwo);
+}
+
+.product__section--five{
+    background: var(--cover--color--poet);
+}
+
+.product__button{
+    outline: none;
+    border: none;
+    background: none;
+    color: var(--font-color-white);
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+@media screen and (max-width: 62.5rem){
+    .modal{
+        grid-template-columns: 100%;
+    }
+    .modal__button{
+        display: none;
+    }
+}

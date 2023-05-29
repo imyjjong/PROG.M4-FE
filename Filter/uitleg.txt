@@ -1,0 +1,19 @@
+so basically de code is like hoe je de games kan laten zien en weg kan halen met een filter
+
+de filter onchnge functie is best makkelijk, 
+als je classes gebruikt dan gebruik je de for loop zodat je kan aanduiden door bijvoorbeeld
+[i] of [0] ofzo gebruikt dan weet je welke je bedoeld.
+je doet zegmaar op onchange, wat betekent wanneer er iets veranderd
+dan ga je like de display veranderen. wat betekent als je op de checkbox klikt dat de games of weg gaan of terugkomen
+met none gaan ze weg en met flex/block laten ze yk hunzelf zien.
+je doet dit met if en else wat en true and false. dus if blabla is true dan gebeurd dit en anders (else) dan gebeurd er iets anders.
+ ja thats it, ik bedoel ik snap precies waarom de code werkt,
+ maar ja ik weet niet zo goed wat ik moet uitleggen🙂
+
+ verder de overflow ja, idk het is zo logisch wat het doet like yk maar ja
+ je doet zo tagname want het is de naam van de tag in de html, bijvoorbeeld main.
+ als je dat hebt dan doe je [0] yk om zeker van te weten dat je de eerste hebt.
+ daarna ga je naar style want je wilt iets in de style veranderen en dan doe je overflow auto want je wilt de overflow weer aanzetten.
+ de , 1500 betekent na zoveel milliseconden omgerekent in seconden is 1.5 seconden.
+
+ja het lijkt me best duidelijk.

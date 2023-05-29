@@ -1,0 +1,140 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    background: #eee;
+    font-family: sans-serif;
+    padding: 8rem;
+    overflow: hidden;
+}
+
+body::before, body::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: away;
+    animation-duration: 1.2s;
+    transform-origin: right;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+}
+body::before{
+    background: purple;
+    animation-delay: 0.3s;
+    z-index: 1;
+}
+
+body::after{
+    background: pink;
+    z-index: 2;
+
+}
+
+main{
+    width: 100%;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-name: popup;
+    animation-duration: 0.8s;
+    animation-delay: 1.5;
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
+    width: 100%;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.inputs > div{
+    display: flex;
+    align-items: center;
+    width: 40rem;
+}
+
+.filter{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 2rem;
+    appearance: none;
+    -webkit-appearance: none;
+    background: #eee;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.label:hover{
+    cursor: pointer;
+}
+
+.filter:hover{
+    cursor: pointer;
+}
+
+.filter:checked{
+    background: pink;
+}
+
+.filter:checked ~ .label{
+    text-decoration: underline;
+}
+
+.games{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.game{
+    list-style: none;
+    width: 25rem;
+    height: 25rem;
+    transition: 0.2s transform;
+    flex-grow: 1;
+}
+
+.game:hover{
+    transform: scale(1.02) translateY(-0.7rem);
+    cursor: pointer;
+}
+
+.game > img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes away{
+    from{
+        transform: scaleX(1);
+    }
+    to{
+        transform: scaleX(0);
+    }
+}
+
+@keyframes popup{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
